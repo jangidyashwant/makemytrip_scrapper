@@ -1,0 +1,12 @@
+mmt:
+  product:
+    product_api : https://mapi.makemytrip.com/clientbackend/cg/search-rooms/DESKTOP/2?language=eng&region=in&currency=INR&idContext=B2C&countryCode=IN
+    headers : {"accept": "application/json", "accept-language": "en-GB,en;q=0.9", "content-type": "application/json", "origin": "https://www.makemytrip.com", "referer": "https://www.makemytrip.com/", "sec-ch-ua": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Google Chrome\";v=\"134\"", "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": "\"macOS\"", "sec-fetch-dest": "empty", "sec-fetch-mode": "cors", "sec-fetch-site": "same-site", "tid": "avc", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36", "visitor-id": "97adc924-f093-4cec-8107-c9965a6ea87a"}
+    payload : {'deviceDetails': {'appVersion': '134.0.0.0', 'deviceId': '5a0d9450-9716-486c-9947-e27375ca3b2b', 'deviceType': 'Desktop', 'bookingDevice': 'DESKTOP', 'deviceName': None}, 'searchCriteria': {'hotelId': '202304261920025912', 'checkIn': '2025-05-06', 'checkOut': '2025-05-14', 'roomStayCandidates': [{'rooms': 1, 'adultCount': 2, 'childAges': []}], 'comparatorHotelIds': [], 'countryCode': 'IN', 'cityCode': 'CTGGN', 'locationId': 'RGNCR', 'locationType': 'region', 'currency': 'INR', 'limit': 20, 'personalCorpBooking': False, 'userSearchType': 'hotel'}, 'requestDetails': {'visitorId': '97adc924-f093-4cec-8107-c9965a6ea87a', 'visitNumber': 1, 'trafficSource': None, 'loggedIn': False, 'funnelSource': 'HOTELS', 'idContext': 'B2C', 'notifCoupon': None, 'pageContext': 'DETAIL', 'channel': 'B2Cweb', 'seoCorp': False, 'payMode': None, 'isExtendedPackageCall': False, 'forwardBookingFlow': False}, 'featureFlags': {'addOnRequired': True, 'applyAbsorption': True, 'bestCoupon': True, 'freeCancellationAvail': True, 'responseFilterFlags': True, 'soldOutInfoReq': True, 'walletRequired': True, 'bestOffersLimit': 3}, 'filterCriteria': [], 'expData': '{APE:10,PAH:5,PAH5:T,WPAH:F,BNPL:T,MRS:T,PDO:PN,MCUR:T,ADDON:T,CHPC:T,AARI:T,NLP:Y,RCPN:T,PLRS:T,MMRVER:V3,BLACK:T,IAO:F,BNPL0:T,EMIDT:1,CRI:T,GBE:T,CV2:T,MLOS:T,SOU:T,APT:T,SRRP:T,AIP:T,PLV2:T,RTBC:T,SPKG:T,TFT:T,GALLERYV2:T,NDD:T,UGCV2:T}'}
+  
+  listing:
+    block : //div[contains(@id,'Listing_hotel')]
+    hotel_title : .//p[@id="hlistpg_hotel_name"]/span/text()
+    hotel_url : .//div/a/@href
+    room_list_price : .//p[@id="hlistpg_hotel_shown_price"]/text()
+

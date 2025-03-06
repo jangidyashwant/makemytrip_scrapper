@@ -1,0 +1,7 @@
+argparse
+datetime
+lxml
+pymongo
+PyYAML
+requests
+selenium
